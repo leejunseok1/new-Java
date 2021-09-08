@@ -1,0 +1,86 @@
+package 정올;
+
+import java.util.Scanner;
+
+public class For_1 {
+	public static void main(String[] args) {
+		int num;
+		int i = 0;
+		Scanner sc = new Scanner(System.in);
+		
+		while(true) {
+			num = sc.nextInt();
+			if(num==0)break;
+			if(num%3 !=0 && num%5 !=0) i++;
+		}
+		System.out.println(i);
+		
+	}
+
+}
+//-------------------------------
+package 정올;
+
+import java.util.Scanner;
+
+// 삼각형의 밑변의 길이와 높이를 입력받아 넓이를 출력
+// 밑변의 길이, 높이 -- 입력  넓이 --출력
+//  continue? 에서 하나의 문자를 입력받기
+// 그 문자가 Y 나 y 이면 작업을 반복
+// 다른문자이면 종료
+public class For_129 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		double a = 0; //밑변의 길이
+		double b = 0; // 높이
+		double sum = 0;
+		
+		String answer = "";
+		
+		while(true) {
+			a = sc.nextInt();
+			b = sc.nextInt();
+			sum = a*b/2;
+			System.out.printf("%.1f", sum);
+			sc.nextLine();
+			System.out.println("Continue? ");
+			 answer = sc.nextLine();
+
+			if (answer.equals("Y") || answer.equals("y")) {
+				continue;
+			} else {
+				break;
+			}
+		}
+				
+		
+		
+	}
+
+}
+//-------------------------------------
+
+package 정올;
+
+import java.util.Scanner;
+
+public class For_538 {
+	public static void main(String[] args) {
+		int a=0;
+		Scanner sc = new Scanner(System.in);
+		
+		while(true) {
+			System.out.print("number? ");
+			a = sc.nextInt();
+			if(a == 0) break;
+			if(a > 0) {
+				System.out.println("positive integer");
+			}
+				else if(a < 0) {
+					System.out.println("negative number");
+				}
+			
+		}
+	}
+
+}
